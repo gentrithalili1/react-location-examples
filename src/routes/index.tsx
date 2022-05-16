@@ -11,6 +11,13 @@ export const location = new ReactLocation();
 export const routes = [
   { path: "/", element: <Home /> },
   { path: "about", element: <About /> },
-  { path: "query-params", element: <QueryParams /> },
+  {
+    path: "query-params",
+    element: <QueryParams />,
+    // search: (search: any) => {
+    //   console.log(search);
+    //   return search.show === "9999";
+    // },
+  },
   { ...postsRoutes },
 ];
