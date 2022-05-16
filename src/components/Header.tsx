@@ -25,6 +25,11 @@ function Header(props: HeaderProps) {
             About
           </Link>
         </li>
+        <li>
+          <Link getActiveProps={getActiveProps} to="query-params">
+            QueryParams
+          </Link>
+        </li>
       </ul>
     </header>
   );

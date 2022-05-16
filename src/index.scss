@@ -53,3 +53,17 @@ header {
   padding: 15px;
   background-color: #eee;
 }
+
+.QueryParams {
+  a {
+    margin: 10px 0;
+    display: block;
+  }
+
+  &-docs {
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-top: 100px;
+  }
+}
