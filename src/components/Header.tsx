@@ -1,5 +1,8 @@
 import { Link } from "@tanstack/react-location";
-import "./Header.scss";
+
+function getActiveProps() {
+  return { className: "active" };
+}
 
 interface HeaderProps {}
 
@@ -8,13 +11,19 @@ function Header(props: HeaderProps) {
     <header>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link getActiveProps={getActiveProps} to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="posts">Posts</Link>
+          <Link getActiveProps={getActiveProps} to="posts">
+            Posts
+          </Link>
         </li>
         <li>
-          <Link to="about">About</Link>
+          <Link getActiveProps={getActiveProps} to="about">
+            About
+          </Link>
         </li>
       </ul>
     </header>

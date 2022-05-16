@@ -14,7 +14,7 @@ function Posts(props: PostsProps) {
   }, []);
 
   return (
-    <div>
+    <div className="Posts">
       <p>Posts:</p>
       <ul>
         {posts.map((post: any) => {

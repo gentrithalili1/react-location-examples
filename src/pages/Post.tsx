@@ -20,7 +20,7 @@ function Post(props: PostProps) {
   }
 
   return (
-    <div>
+    <div className="Post">
       <ul>
         <li>id: {post.id}</li>
         <li>title: {post.title}</li>
