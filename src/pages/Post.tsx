@@ -1,19 +1,12 @@
 import { useMatch } from "@tanstack/react-location";
-import { useEffect, useState } from "react";
-import { fetchPostById } from "../api";
+import { LocationGenerics } from "../types";
 
 interface PostProps {}
 
 function Post(props: PostProps) {
-  const [post, setPost] = useState<any>(null);
-  const match = useMatch();
-  const postId = match.params.postId;
-
-  useEffect(() => {
-    fetchPostById(Number(postId)).then((response) => {
-      setPost(response);
-    });
-  }, [postId]);
+  const {
+    data: { post },
+  } = useMatch<LocationGenerics>();
 
   if (!post) {
     return null;

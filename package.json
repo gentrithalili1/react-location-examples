@@ -10,6 +10,7 @@
   "dependencies": {
     "@tanstack/react-location": "^3.7.4",
     "@tanstack/react-location-devtools": "^3.4.4",
+    "@tanstack/react-location-simple-cache": "^3.4.4",
     "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
