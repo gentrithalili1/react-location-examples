@@ -11,7 +11,7 @@ function Post(props: PostProps) {
 
   useEffect(() => {
     fetchPostById(Number(postId)).then((response) => {
-      setPost(response.data);
+      setPost(response);
     });
   }, [postId]);
 

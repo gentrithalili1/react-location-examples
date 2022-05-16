@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import { Router, Outlet } from "@tanstack/react-location";
-import { location, routes } from "./routing";
+import { location, routes } from "./routes";
 
 function App() {
   return (

@@ -1,23 +1,18 @@
-import { Link, Outlet } from "@tanstack/react-location";
-import { useEffect, useState } from "react";
-import { fetchPosts } from "../api";
+import { Link, Outlet, useMatch } from "@tanstack/react-location";
+import { LocationGenerics } from "../types";
 
 interface PostsProps {}
 
 function Posts(props: PostsProps) {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    fetchPosts().then((response) => {
-      setPosts(response.data.slice(0, 10));
-    });
-  }, []);
+  const {
+    data: { posts },
+  } = useMatch<LocationGenerics>();
 
   return (
     <div className="Posts">
       <p>Posts:</p>
       <ul>
-        {posts.map((post: any) => {
+        {posts?.slice(0, 10)?.map((post) => {
           return (
             <li key={post.id}>
               <Link to={post.id}>{post.title}</Link>
