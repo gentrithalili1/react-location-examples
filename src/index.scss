@@ -53,3 +53,24 @@ header {
   padding: 15px;
   background-color: #eee;
 }
+
+.Breadcrumbs {
+  display: flex;
+  align-items: center;
+  background-color: #dedede;
+  margin: 0;
+  padding: 10px;
+  li {
+    margin-right: 10px;
+    &:after {
+      content: ">";
+      margin-left: 10px;
+    }
+    &:last-of-type:after {
+      content: "";
+    }
+  }
+  li a {
+    text-decoration: none;
+  }
+}

@@ -14,10 +14,18 @@ export const routes = [
   {
     path: "posts",
     element: <Posts />,
+    meta: {
+      breadcrumb: () => "Posts",
+    },
     children: [
       {
         path: ":postId",
         element: <Post />,
+        meta: {
+          breadcrumb: (params: any) => {
+            return params.postId;
+          },
+        },
       },
     ],
   },
