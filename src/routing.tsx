@@ -22,3 +22,5 @@ export const routes = [
     ],
   },
 ];
+
+// @tanstack/react-location-elements-to-routes
